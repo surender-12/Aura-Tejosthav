@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AURA TEJOSTHAV | Robotics Expo</title>
+
+  <style>
+    body{
+      margin:0;
+      font-family:"Segoe UI", Arial, sans-serif;
+      background:#f6f9ff;
+      color:#222;
+    }
+
+    header{
+      background:#ffffff;
+      border-bottom:3px solid #0b5ed7;
+      text-align:center;
+      padding:15px 10px;
+    }
+
+    header img{ max-height:90px; }
+
+    header h1{
+      margin:10px 0 0;
+      font-size:28px;
+      color:#e3d508;
+    }
+
+    header h2{
+      margin:4px 0;
+      font-size:18px;
+      font-weight:400;
+      color:#41cf0e;
+    }
+
+    header h3{
+      margin:6px 0 0;
+      font-size:22px;
+      letter-spacing:1px;
+      color:#d70b8c;
+    }
+
+    main{
+      max-width:900px;
+      margin:30px auto;
+      background:#ffffff;
+      padding:30px 40px;
+      border-radius:10px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .project-list{
+      font-size:18px;
+      line-height:1.9;
+    }
+
+    .project-list a{
+      text-decoration:none;
+      color:#0b5ed7;
+      font-weight:500;
+    }
+
+    .project-list a:hover{
+      text-decoration:underline;
+    }
+
+    .note{
+      margin-top:30px;
+      font-weight:600;
+      text-align:center;
+      color:#333;
+    }
+
+    /* ---------- METAL BOTS ---------- */
+    .metal-bots{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+      gap:20px;
+      margin-top:25px;
+    }
+
+    .bot-card{
+      background:#fff;
+      border:1px solid #ddd;
+      border-radius:10px;
+      padding:12px;
+      text-align:center;
+      box-shadow:0 4px 8px rgba(0,0,0,0.06);
+    }
+
+    .bot-card a{
+      text-decoration:none;
+      color:#333;
+    }
+
+    .bot-card img{
+      width:100%;
+      height:160px;
+      object-fit:cover;
+      border-radius:8px;
+      transition:transform 0.3s ease;
+      cursor:pointer;
+    }
+
+    /* Hover zoom */
+    .bot-card img:hover{
+      transform:scale(1.1);
+    }
+
+    .bot-card p{
+      margin-top:10px;
+      font-weight:600;
+    }
+
+    /* ---------- IMAGE POPUP ---------- */
+    .popup{
+      display:none;
+      position:fixed;
+      top:0; left:0;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.8);
+      justify-content:center;
+      align-items:center;
+      z-index:1000;
+    }
+
+    .popup img{
+      max-width:90%;
+      max-height:90%;
+      border-radius:10px;
+      box-shadow:0 0 20px #000;
+    }
+
+    .popup:target{
+      display:flex;
+    }
+
+    footer{
+      margin-top:40px;
+      background:#0b5ed7;
+      color:#fff;
+      text-align:center;
+      padding:12px;
+      font-size:14px;
+    }
+
+    /* --- Project List + Image Side-by-Side --- */
+.project-layout{
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.project-layout .project-list{
+  flex: 1;
+}
+
+.project-image-box{
+  flex: 1;
+  padding: 10px;
+  margin-top: 40px;   /* moves image down */
+}
+
+.project-image-box img{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;                 /* smooth edges */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15); /* optional clean look */
+}
+
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.jpeg" alt="Takshasila Public School Logo" />
+  <h1>WELCOME TO AURA TEJOSTHAV</h1>
+  <h2>The Spirit of Creativity – Knowledge Motion</h2>
+  <h3>ROBOTICS EXPO</h3>
+</header>
+
+<main>
+
+  <h2 style="text-align:center;color:#ee5305;margin-bottom:20px;">
+    Robotics Project List
+  </h2>
+
+  <div class="note">Select the Project to know more about it:</div>
+
+<div class="project-layout">
+
+  <!-- LEFT SIDE: PROJECT LIST -->
+  <ol class="project-list">
+    <li><a href="ir-gate.html">IR Receiver Controlled Gate</a></li>
+    <li><a href="greeting.html">Greeting Robot</a></li>
+    <li><a href="Forest.html">Forest Animal Vehicle Alert System</a></li>
+    <li><a href="pooja.html">Pooja Robot</a></li>
+    <li><a href="GPS School.html">GPS School Belt</a></li>
+    <li><a href="Fire Fighting.html">Automatic Fire Fighting Robot</a></li>
+    <li><a href="Smart Sand ID.html">Smart Sand ID Finder</a></li>
+    <li><a href="Smart Energy Meter.html">Smart Energy Meter</a></li>
+    <li><a href="Home Automation.html">Modern Home Automation</a></li>
+    <li><a href="Vision GPT.html">Vision GPT</a></li>
+    <li><a href="Face recognition.html">Face Recognition Door Unlock System</a></li>
+    <li><a href="AI Emotion Detection.html">AI Emotion Detection System</a></li>
+    <li><a href="Smart Attendance System.html">Smart Attendance System</a></li>
+    <li><a href="Human Following.html">Human Following Robot</a></li>
+    <li><a href="AI Object Detection.html">AI Object Detection System</a></li>
+  </ol>
+
+  <!-- RIGHT SIDE: IMAGE (INSIDE THE BOX) -->
+  <div class="project-image-box">
+    <img src="Event_Banner.jpeg" alt="Robotics Expo">
+  </div>
+
+</div>
+
+
+
+  <hr style="margin:40px 0;">
+
+  <h2 style="text-align:center;color:#0b5ed7;">METAL BOTS</h2>
+
+  <div class="metal-bots">
+
+    <!-- BOT 1 -->
+    <div class="bot-card">
+      <a href="#img1">
+        <img src="cyber_truck poster.png" alt="Cyber Truck with Surveillance">
+        <p>Cyber Truck with Surveillance</p>
+      </a>
+    </div>
+
+    <div class="bot-card">
+      <a href="#img2">
+        <img src="4 x 4 Off road.jpeg">
+        <p>4 X 4 Off road</p>
+      </a>
+    </div>
+
+    <div class="bot-card">
+      <a href="#img3">
+        <img src="Human Following bot.jpeg">
+        <p>Human Following Bot</p>
+      </a>
+    </div>
+
+    <div class="bot-card">
+      <a href="#img4">
+        <img src="Rescue Bot.jpeg">
+        <p>Rescue Bot</p>
+      </a>
+    </div>
+
+    <div class="bot-card">
+      <a href="#img5">
+        <img src="Flags.jpeg">
+        <p>Flags</p>
+      </a>
+    </div>
+
+    <div class="bot-card">
+      <a href="#img6">
+        <img src="Radar bot.png">
+        <p>Radar Bot(Wifi Controlled)</p>
+      </a>
+    </div>
+
+    <div class="bot-card">
+      <a href="#img7">
+        <img src="Soccer.jpeg">
+        <p>Soccer Game</p>
+      </a>
+    </div>
+
+  </div>
+</main>
+
+<!-- POPUPS -->
+<div id="img1" class="popup"><a href="#"><img src="cyber_truck poster.png"></a></div>
+<div id="img2" class="popup"><a href="#"><img src="4 x 4 Off road.jpeg"></a></div>
+<div id="img3" class="popup"><a href="#"><img src="Human Following bot.jpeg"></a></div>
+<div id="img4" class="popup"><a href="#"><img src="Rescue Bot.jpeg"></a></div>
+<div id="img5" class="popup"><a href="#"><img src="Flags.jpeg"></a></div>
+<div id="img6" class="popup"><a href="#"><img src="Radar bot.png"></a></div>
+<div id="img7" class="popup"><a href="#"><img src="Soccer.jpeg"></a></div>
+
+<footer>
+  AURA TEJOSTHAV | 2026
+</footer>
+
+</body>
+</html>
